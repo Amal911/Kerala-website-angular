@@ -1,0 +1,36 @@
+<!-- <p>district works!</p> -->
+<!-- <p>{{districtName}}</p> -->
+<!-- @for(img of data.districts[0].images; track img){
+    <img [src]="img" alt="">
+} -->
+
+<app-district-main-image [districtData]="districtData" />
+
+<div id="district-intro">
+  <h4>{{ districtData.introduction }}</h4>
+</div>
+
+<div id="attractions" class="container-fluid">
+  <h3>Major Attractions at {{ districtData.name }}</h3>
+  <div class="attraction-cards">
+    @for(attraction of districtData.key_attractions; track attraction.name){
+    <app-cards [cardData]="attraction" />
+    }
+  </div>
+</div>
+
+<div id="todo" class="container-fluid">
+  <h3>Things to do at {{ districtData.name }}</h3>
+  <div id="todo-list" class="d-flex flex-column gap-5">
+      @for(todo of districtData.things_to_do; track todo){
+          <div class="d-flex justify-content-center gap-5">
+              <div>
+                  <img  src="{{todo.image}}" alt=""  width="300px">
+                </div>
+                <div class="todo-desc">
+                    <p>{{ todo.desc }}</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

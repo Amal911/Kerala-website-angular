@@ -1,0 +1,15 @@
+#main-img{
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-position: center;
+    h3{
+        font-size: 3rem;
+        background-color: rgba(105, 105, 105, 0.393);
+        padding: 1rem;
+        border-radius: 20px;
+    }
+}

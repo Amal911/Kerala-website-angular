@@ -1,0 +1,11 @@
+@if (login) {
+    <!-- <app-login /> -->
+     <app-reactive-login (newItemEvent)="toggleLogin()"/>
+}
+@else {
+    <app-signupcard (newItemEvent)="toggleLogin()"/>
+}
+
+
+
+

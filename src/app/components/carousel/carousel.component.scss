@@ -1,0 +1,14 @@
+#carouselExampleCaptions{
+    margin: 0;
+    padding: 0;
+    img{
+        height: 80vh;   
+        object-fit: cover;
+    }
+    h5{
+        font-size: 2.8rem;
+    }
+    .carousel-caption{
+      top: 30%;  
+    }
+}

@@ -1,0 +1,62 @@
+<section>
+  <div class="signin">
+    <div class="content">
+      <h2>Log In</h2>
+      <form (ngSubmit)="onSubmit(actorForm)" #actorForm="ngForm">
+        <div class="form">
+          <div class="inputBox">
+            <input type="text" #name="ngModel" required name="username" ngModel minlength="4" forbiddenName="susa"/> <i>Username</i>
+            <!-- <div class="error-message" *ngIf="name.invalid && (name.dirty || name.touched)"
+              class="alert">
+              <div class="error-message" *ngIf="name.hasError('required')">
+                Name is required.
+              </div>
+              <div class="error-message" *ngIf="name.hasError('minlength')">
+                Name must be at least 4 characters long.
+              </div>
+              <div class="error-message" *ngIf="name.hasError('forbiddenName')">
+                Name cannot be Bob.
+              </div>
+            </div> -->
+            @if (name.invalid && (name.dirty || name.touched)) {
+              <div class="error-message" 
+              class="alert">
+              @if (name.hasError('required')) {
+
+                <div class="error-message" >
+                  Name is required.
+                </div>
+              }
+              @else if (name.hasError('minlength')) {
+
+                <div class="error-message" >
+                  Name must be at least 4 characters long.
+                </div>
+              }
+              @else if (name.hasError('forbiddenName')) {
+
+                <div class="error-message">
+                  Name cannot be Bob.
+                </div>
+              }
+            </div>
+            }
+          </div>
+
+          <div class="inputBox">
+            <input type="password" required name="password" ngModel/> <i>Password</i>
+          </div>
+
+          <div class="links">
+            <a href="#">Forgot Password</a> <a href="#">Signup</a>
+          </div>
+
+          <div class="inputBox">
+            <input type="submit" value="Login" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- partial -->
