@@ -1,6 +1,16 @@
-
-  <p routerLink="/district/thrissur">thrissur</p>
-  <p routerLink="/district/thiruvananthapuram">trivandrum</p>
-  <p routerLink="/district/ernakulam">ernakulam</p>
-  <p routerLink="/district/kannur">kannur</p>
-  <p routerLink="/district/malapuram">malapuram</p>
+<div>
+  <div class="d-flex justify-content-center"><h3>All Districts</h3></div>
+  <div class="d-flex flex-wrap gap-4 justify-content-around">
+    <div *ngFor="let item of getObjectKeys()" class="col-3">
+      <div class="card mt-4" routerLink="/district/{{item}}">
+        <img [src]="districts[item].images" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h6>{{ districts[item].name }}</h6>
+          <p class="card-text">
+            {{ districts[item].introduction }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

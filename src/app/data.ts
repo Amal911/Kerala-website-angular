@@ -1,6 +1,6 @@
 let keralaData = {
   welcome: {
-    title: "Welcome to Kerala The God's Own Country",
+    title: "Kerala The God's Own Country",
     introduction:
       "Nestled on the southwestern coast of India, Kerala is renowned worldwide for its enchanting backwaters, serene beaches, misty hill stations, vibrant cultural heritage, and lush greenery. Fondly called 'God's Own Country,' Kerala attracts travelers with its unique blend of natural beauty, rich traditions, and progressive social indicators.",
   },
